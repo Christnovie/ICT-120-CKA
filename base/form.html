@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form action="/" method="post">
+  First name: <input type="text" id="txtFirstName" name="firstname" value="Mickey"><br>
+  Last name: <input type="text"  name="lastname" value="Mouse"><br><br>
+  Je suis un terroriste <input id="chkTerrorist" type="checkbox" name="terrorist"><br><br>
+  <input type="submit" value="Submit"></form>
+</body>
+<script>
+  // test if the checkbox Terrorist is checked
+
+  chkTerrorist.addEventListener('click',chkTerroristClick);
+  //function to show name and age on dialog box
+
+  function hallo(name, age)
+  {
+      if(age>=18){
+        alert('Bonjour Monsieur '+ name);
+        return true;
+      }
+      else {
+          alert('Salut '+ name );
+        return true;
+      }
+  }
+  console.log(hallo('Arthur',16));
+  console.log(hallo('Ander',18));
+  console.log(hallo('Gwenael',20));
+
+  firstname = 'Gerthrude ';
+  age = "";
+
+  function chkTerroristClick() {
+    if (chkTerrorist.checked){
+      alert('Attention Donald, '+ txtFirstName.value + ' est un terrorist');
+      age = prompt('Quel age avez-vous ?');
+      for(i= 16;i<25;i++){
+        if(i>18)alert('Bonjour madame' + firstname +'('+i+')');
+        else{
+          if(i>18)alert('Bonjour madame' + firstname +'('+i+')');
+        }
+      }
+
+    }
+  }
+</script>
+
+</html>
