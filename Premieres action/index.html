@@ -1,30 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="script" href="styles.css" type="text/css">
 <head>
     <meta charset="UTF-8">
     <title>Premiers pas en js</title>
     <style>
         div {
-            padding : 5px;
+            padding: 5px;
             margin: 5px;
-            border: solid 1px black;
+            border: solid 1px white;
             width: fit-content;
+            color: white;
+
+
+        }
+        body{
+            background-color:black ;
         }
     </style>
 </head>
 <body>
-<div>Cette div doit avoir un fond bleu après qu'on lui aie cliqué dessus</div>
-<div>Cette div avoir son texte 'tracé' après qu'on lui aie cliqué dessus</div>
-<div>Ce texte doit être en police Arial quand la souris le survole</div>
+<div id="casper">Cette div doit avoir un fond bleu après qu'on lui aie cliqué dessus</div>
+<div id="john">Cette div avoir son texte 'tracé' après qu'on lui aie cliqué dessus</div>
+<div id="gg">Ce texte doit être en police Arial quand la souris le survole</div>
 <div>
     Cette div doit dire 'YES' en blanc sur fond vert quand les deux checkboxes dessous sont cochées.<br>
     A ce moment les checkboxes doivent disparaître<br>
-    <input type="checkbox"></input><input type="checkbox"></input>
+    <input id="check1" type="checkbox"><input id="check2" type="checkbox">
 </div>
-<div>
+<div id="destroyer">
     Quand on clique sur ce texte, ça détruit
-    <div>cette div</div>
+    <div id="victime">cette div</div>
 </div>
 
 </body>
+<script>
+    check1.addEventListener('checked',Erreur1);
+    check2.addEventListener('checked',Erreur1);
+    casper.addEventListener('click',changeColor);
+    john.addEventListener('click',textTrace);
+    gg.addEventListener('mouseover',ChangePolice);
+    destroyer.addEventListener('click',remover);
+    function changeColor() {
+
+      var x =  document.getElementById("casper");
+      x.style.color = "blue";
+    }
+    function textTrace() {
+        var x = document.getElementById('john');
+        x.style.textDecoration = "line-through";
+
+    }
+    function remover() {
+        var x = document.getElementById('victime');
+        x.border = ()
+    }
+    function Erreur1() {
+       var check =  document.getElementById('check1');
+       var checks = document.getElementById('check2');
+        if(check.checked === true && checks.checked === true){
+
+        }
+    }
+    function ChangePolice() {
+
+        var x = document.getElementById('gg');
+
+            x.style.fontFamily = 'arial';
+
+    }
+
+
+</script>
 </html>

@@ -1,6 +1,8 @@
-div {
-    padding : 5px;
+body {
+    padding: 5px;
     margin: 5px;
-    border: solid 1px black;
+    border: solid 1px white;
     width: fit-content;
+    color: white;
+    background: black;
 }
