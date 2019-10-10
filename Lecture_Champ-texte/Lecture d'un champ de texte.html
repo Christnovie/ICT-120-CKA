@@ -10,10 +10,17 @@
 <body>
 <form>
 
-    <input type="text" name="qqch" value="" />
+    <input id="textInto" type="text" name="qqch" value="" />
 
-    <input type="submit" value="GO" />
+    <input id="result" type="submit" value="GO" />
 
 </form>
 </body>
 </html>
+<script>
+    result.addEventListener('submit',messageSend);
+    function messageSend() {
+        var x = document.getElementById('textInto').valueOf();
+        console.log(alert();
+    }
+</script>
