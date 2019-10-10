@@ -23,7 +23,7 @@
 <div id="casper">Cette div doit avoir un fond bleu après qu'on lui aie cliqué dessus</div>
 <div id="john">Cette div avoir son texte 'tracé' après qu'on lui aie cliqué dessus</div>
 <div id="gg">Ce texte doit être en police Arial quand la souris le survole</div>
-<div>
+<div id="Yes">
     Cette div doit dire 'YES' en blanc sur fond vert quand les deux checkboxes dessous sont cochées.<br>
     A ce moment les checkboxes doivent disparaître<br>
     <input id="check1" type="checkbox"><input id="check2" type="checkbox">
@@ -35,8 +35,8 @@
 
 </body>
 <script>
-    check1.addEventListener('checked',Erreur1);
-    check2.addEventListener('checked',Erreur1);
+    check1.addEventListener('click',Erreur1);
+    check2.addEventListener('click',Erreur1);
     casper.addEventListener('click',changeColor);
     john.addEventListener('click',textTrace);
     gg.addEventListener('mouseover',ChangePolice);
@@ -53,13 +53,18 @@
     }
     function remover() {
         var x = document.getElementById('victime');
-        x.border = ()
+        x.style.display = 'none'
     }
     function Erreur1() {
+        var final = document.getElementById('Yes');
        var check =  document.getElementById('check1');
        var checks = document.getElementById('check2');
         if(check.checked === true && checks.checked === true){
-
+            check.style.display = 'none';
+            checks.style.display = 'none';
+            final.textContent = 'YES';
+            final.style.backgroundColor = 'green';
+            console.log(alert('bien joué tu as reussi!!!'));
         }
     }
     function ChangePolice() {
