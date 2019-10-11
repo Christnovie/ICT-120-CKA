@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture champ de texte</title>
+    <style>
+        input{
+            color: white;
+            background-color: black;
+
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<form name ="formes">
+
+    <input id="textInto" type="text" name="qqch" value="" placeholder="nom"/> <br>
+
+    <input id="gg" type="password" name="qqun" value="" placeholder="Password"/><br>
+
+    <input id="result" name="envoi" type="submit" value="GO" />
+
+</form>
+</body>
+</html>
+<script>
+
+    function messageSend() {
+        var x = document.getElementById('textInto');
+        var y = document.getElementById('gg');
+
+        if(x.qqch.value ===  "" || y.qqun.value === ""){
+            alert("Le formulaire n'est pas totalement remplie");
+            
+        }
+        else {
+            document.formes.envoi.onsubmit;
+        }
+    }
+    click.addEventListener('submit',messageSend);
+</script>
