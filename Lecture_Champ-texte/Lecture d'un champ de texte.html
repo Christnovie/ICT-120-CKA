@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <title>Lecture champ de texte</title>
     <style>
+        input{
+            color: white;
+            background-color: black;
 
+        }
+        body{
+            background-color: black;
+        }
     </style>
 </head>
 <body>
-<form>
+<form name ="formes">
 
     <input id="textInto" type="text" name="qqch" value="" />
 
@@ -18,9 +25,10 @@
 </body>
 </html>
 <script>
-    result.addEventListener('submit',messageSend);
+
     function messageSend() {
-        var x = document.getElementById('textInto').valueOf();
-        console.log(alert();
+
+        alert( "Tu es " + document.formes.qqch.value);
     }
+    result.addEventListener('click',messageSend);
 </script>
