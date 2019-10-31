@@ -9,14 +9,51 @@
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap-grid.css">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap-reboot.css">
     <style>
-        body{
+        #loginInfo{
+            border: white 2px ridge;
+            -webkit-box-align: center;
+            width: 8cm;
+
+            background-color: white;
             text-align: center;
+        }
+        #image1{
+            background-color: white;
+            text-align: left;
+            padding: 10px;
+        }
+        #entente{
+
+        }
+        body{
+            background-color: #202326;
+            
         }
     </style>
 </head>
 <body>
-<div class="bg-danger">
-PARTICIPANT CPNV
+
+<div id="entente" class="bg-success">
+    <img id="image1" src="../logo@2x.png"/>
+
+</div>
+<div>
+<div>
+    LOGIN CPNV
+</div>
+<div class="row">
+
+<div id="loginInfo" class="align-content-center col-lg-5 col-md-8 col-sm-12">
+
+    <div><label>Email</label>
+        <input type="text"><br></div>
+    <div><label>Password</label>
+        <input type="password"><br></div>
+    <div class="btn btn-block"><input type="button"></div>
+
+
+</div>
+</div>
 </div>
 </body>
 </html>
