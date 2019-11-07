@@ -30,8 +30,8 @@
 <body id="page-top" >
 
 
-<div class=" bg-success" id="entente">PARTICIPANT VOYAGE D'ETUDE</div>
 
+<div id="backAnime">
 <nav class="navbar navbar-expand-lg navbar-darK bg-light fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-none d-lg-block">
@@ -39,7 +39,7 @@
               alt="">
       </span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -61,7 +61,7 @@
     </div>
 </nav>
 
-
+</div>
 
 
 
@@ -75,7 +75,14 @@
 
 <!-- Custom scripts for this template -->
 <script src="js/resume.min.js"></script>
-
+<script src="js/resume.min.js"></script>
+<script src="Vanta/vendor/three.r92.min.js"></script>
+<script src="Vanta/dist/vanta.birds.min.js"></script>
+<script>
+    VANTA.BIRDS({
+        el: "#backAnime"
+    })
+</script>
 
 </body>
 

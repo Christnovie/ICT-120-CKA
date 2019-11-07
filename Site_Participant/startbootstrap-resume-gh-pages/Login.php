@@ -1,3 +1,12 @@
+<div id="backAnime">
+<?php
+session_start();
+if(!empty($_SESSION["userId"])) {
+    require_once './view/dashboard.php';
+} //else {
+   // require_once 'Login.php';
+//}
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -17,14 +26,20 @@
 
 
 </head>
-<body>
+<body  id="backAnime">
 
-<div id="entente" class="bg-success">
+<div id="entente" class="">
     <img id="image1" src="../logo@2x.png"/>
+    <div class="btn-group">
+        <a class="nav-link js-scroll-trigger" href="Acceuil.html">Acceuil</a>
+        <a class="nav-link js-scroll-trigger" href="Profile.html">Profil</a>
+        <a class="nav-link js-scroll-trigger" href="Liste.html">Liste</a>
+
+    </div>
 
 </div>
 <div>
-    <form action="Login.php" method="post" id="frmLogin" onSubmit="return validate();">
+    <form action="" method="post" id="frmLogin" onSubmit="return validate();">
         <div class="demo-table">
 
             <div class="form-head">Login</div>
@@ -69,6 +84,7 @@
 
 
 <script>
+
     function Loginsucces() {
 
     }
@@ -93,5 +109,14 @@
         return $valid;
     }
 </script>
+<script src="js/resume.min.js"></script>
+<script src="Vanta/vendor/three.r92.min.js"></script>
+<script src="Vanta/dist/vanta.birds.min.js"></script>
+<script>
+    VANTA.BIRDS({
+        el: "#backAnime"
+    })
+</script>
 
 </html>
+</div>

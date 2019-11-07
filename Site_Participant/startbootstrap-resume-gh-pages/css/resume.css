@@ -174,3 +174,9 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+.ClasseAcceuil{
+  z-index: initial;
+   overflow: auto;
+  border: white 1px ridge;
+  background-color: transparent ;
+}

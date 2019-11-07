@@ -12,7 +12,7 @@ class Member
 
     function __construct()
     {
-        require_once "DataSource.php";
+        require_once "./../class/DataSource.php";
         $this->ds = new DataSource();
     }
 
