@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap-grid.css">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap-reboot.css">
-   <link rel="stylesheet" type="text/css" href="vendor/Login%20Script.css" >
+    <link rel="stylesheet" type="text/css" href="vendor/Login%20Script.css" >
 
 
 
@@ -24,21 +24,21 @@
 
 </div>
 <div>
-    <form  action="Acceuil.html" method="post" id="frmLogin" onSubmit="return validate();" >
+    <form action="Login.php" method="post" id="frmLogin" onSubmit="return validate();">
         <div class="demo-table">
 
             <div class="form-head">Login</div>
             <?php
-                if(isset($_SESSION["errorMessage"])) {
+            if(isset($_SESSION["errorMessage"])) {
                 ?>
-            <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
-            <?php
+                <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
+                <?php
                 unset($_SESSION["errorMessage"]);
-                }
-                ?>
+            }
+            ?>
             <div class="field-column">
                 <div>
-                    <label for="password">Username</label><span id="user_info" class="error-info"></span>
+                    <label for="username">Username</label><span id="user_info" class="error-info"></span>
                 </div>
                 <div>
                     <input name="user_name" id="user_name" type="text"
@@ -57,7 +57,7 @@
             <div class=field-column>
                 <div>
                     <input type="submit" name="login" value="Login"
-                           class="btnLogin">
+                           class="btnLogin"></span>
                 </div>
             </div>
         </div>
@@ -65,22 +65,14 @@
 </div>
 
 
-<div class="dashboard">
-    <div class="member-dashboard">Welcome <b><?php echo $displayName; ?></b>, You have successfully logged in!<br>
-        Click to <a href="./user_login_session/logout.php" class="logout-button">Logout</a>
-    </div>
-</div>
 </body>
 
 
 <script>
-    frmLogin.addEventListener('click',Loginsucces);
-    function Loginsucces(valid) {
-        if($valid ===true){
+    function Loginsucces() {
 
-        }
     }
-    
+
     function validate() {
         var $valid = true;
         document.getElementById("user_info").innerHTML = "";
