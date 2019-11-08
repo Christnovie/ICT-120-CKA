@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +22,15 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
 <style>
-  body{
-    background-color: #202326;
+  #texteContenu{
+    z-index: initial;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 100px;
+
+
   }
 </style>
 </head>
@@ -30,21 +38,14 @@
 <body id="page-top" >
 
 
-<div class="ClasseAcceuil">
-  <img>
-  SI-B1 kbnofibuBU ZFZ8FH3FHBOFHABJFA FFBA FAHLJPD '0VUU AFF GAG
-  AA"UA09HAOU GA0A AGA
-  AFHA0FU AA FUFIBOU AA
-  A0FZAEFHA0 FAA
 
 
-
-
-  A F0F 0AF09AFU'A9UFPAU F
-  A AU FAZF09A UAJKFLQ N8
+<div class="backAnime">
+  <div class="container-fluid p-0  ClasseAcceuil" id="texteContenu">
+    Participant
+  </div>
 
 </div>
-<div id="backAnime">
     <nav class="navbar navbar-expand-lg navbar-darK bg-light fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-none d-lg-block">
@@ -77,7 +78,7 @@
     </nav>
 
 
-</div>
+
 
 
 
@@ -99,7 +100,7 @@
 <script src="Vanta/dist/vanta.birds.min.js"></script>
 <script>
   VANTA.BIRDS({
-    el: "#backAnime"
+    el: ".backAnime"
   })
 </script>
 </html>
