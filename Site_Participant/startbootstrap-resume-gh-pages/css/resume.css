@@ -173,6 +173,7 @@ color:white ;
   margin: .2rem;
   background-color: white;
 
+<<<<<<< HEAD
 }
 .texteContenu{
   z-index: initial;
@@ -192,3 +193,6 @@ color:white ;
   padding: 5px;
   border-width: 20px;
 }
+=======
+}
+>>>>>>> 52170c83fbabc8932dc56b5c40223e6ec9b63620
