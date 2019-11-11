@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +22,33 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
 <style>
-  body{
-    background-color: #202326;
+  #texteContenu{
+    z-index: initial;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 100px;
+
+
+  }
+  #block{
+    font-size: 24px;
+    border: transparent 3px  ridge;
+  }
+  .sib{
+    float: left;
+    width: 30%;
+
+    margin: 10%;
+    padding: 5px;
+    border-width: 20px;
+  }
+  #2b{
+    color: white;
+  }
+  #2a{
+    color: white;
   }
 </style>
 </head>
@@ -30,21 +56,21 @@
 <body id="page-top" >
 
 
-<div class="ClasseAcceuil">
-  <img>
-  SI-B1 kbnofibuBU ZFZ8FH3FHBOFHABJFA FFBA FAHLJPD '0VUU AFF GAG
-  AA"UA09HAOU GA0A AGA
-  AFHA0FU AA FUFIBOU AA
-  A0FZAEFHA0 FAA
 
 
+<div class="backAnime">
+  <div class="container-fluid p-0  ClasseAcceuil" id="texteContenu">
+    Participant<br><br>
 
+    <div id="block">
 
-  A F0F 0AF09AFU'A9UFPAU F
-  A AU FAZF09A UAJKFLQ N8
+      <div class="sib" id="sib1"> <a class="nav-link js-scroll-trigger"  href="Liste.html"><p id="2a">SI-A2</p></a> </div>
+      <div class="sib" id="sib2" ><a class="nav-link js-scroll-trigger"  href="Liste.html"><p id="2b">SI-B2</p></a></div>
+
+    </div>
+  </div>
 
 </div>
-<div id="backAnime">
     <nav class="navbar navbar-expand-lg navbar-darK bg-light fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-none d-lg-block">
@@ -75,9 +101,11 @@
 
 
     </nav>
-
-
+<div>
+  <div></div>
 </div>
+
+
 
 
 
@@ -99,7 +127,7 @@
 <script src="Vanta/dist/vanta.birds.min.js"></script>
 <script>
   VANTA.BIRDS({
-    el: "#backAnime"
+    el: ".backAnime"
   })
 </script>
 </html>

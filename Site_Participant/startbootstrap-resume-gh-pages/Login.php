@@ -2,7 +2,7 @@
 <?php
 session_start();
 if(!empty($_SESSION["userId"])) {
-    require_once './view/dashboard.php';
+    require_once 'user_login_session/view/dashboard.php';
 } //else {
    // require_once 'Login.php';
 //}

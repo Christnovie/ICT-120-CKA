@@ -26,26 +26,9 @@ h6 {
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40;
+  color: white;
 }
 
-h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
-}
 
 .subheading {
   text-transform: uppercase;
@@ -170,13 +153,42 @@ section.resume-section .resume-item .resume-date {
 a {
   color: #BD5D38;
 }
+#2b{
+  color: white;
+}
+#2a{
+  color: white;
+}
 
 a:hover, a:focus, a:active {
   color: #824027;
 }
 .ClasseAcceuil{
+
+color:white ;
+  width: 50px;
+  height: 50px;
+
+
+  margin: .2rem;
+  background-color: white;
+
+}
+.texteContenu{
   z-index: initial;
-   overflow: auto;
-  border: white 1px ridge;
-  background-color: transparent ;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 100px;
+
+
+}
+.sib{
+  float: left;
+  width: 50%;
+  background-color: gray;
+  margin: 5%;
+  padding: 5px;
+  border-width: 20px;
 }

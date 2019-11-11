@@ -17,21 +17,52 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <script type="text/javascript" src="codebase/grid.js?v=6.2.2"></script>
+    <link rel="stylesheet" href="codebase/grid.css?v=6.2.2">
+    <link rel="stylesheet" href="samples/common/index.css?v=6.2.2">
+    <link rel="stylesheet" href="samples/common/grid.css?v=6.2.2">
+    <script type="text/javascript" src="samples/common/dataset.js?v=6.2.2"></script>
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
     <style>
         body{
-            background-color: #202326;
+            background-color: #001434;
+        }
+        #texteContenu{
+            z-index: initial;
+            position: absolute;
+            color: white;
+            text-align: center;
+            font-family: fantasy;
+            font-size: 100px;
+            float: right;
+
+        }
+        #grid{
+            background-color: transparent;
+
+        }
+        #remove{
+
+        }
+        #addObject{
+
+        }
+        #AddRemove{
+            position: absolute;
         }
     </style>
+
 </head>
 
 <body id="page-top" >
 
 
 
-<div id="backAnime">
+
+<div>
+
 <nav class="navbar navbar-expand-lg navbar-darK bg-light fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-none d-lg-block">
@@ -59,9 +90,75 @@
 
         </ul>
     </div>
+
 </nav>
 
+    <div class="container-fluid p-0  ClasseAcceuil" id="texteContenu">
+        <div id="backAnime"></div>
+
+
+        <section class="dhx_sample-container">
+
+            <div class="dhx_sample-container__widget" id="grid">
+                <section  class="dhx_sample-controls">
+                    <div id="AddRemove">
+                        <nav class="nav-tabs">
+                        <button id="remove" class="dhx_sample-btn dhx_sample-btn--flat">Delete</button>
+                        <button id="addObject" class="dhx_sample-btn dhx_sample-btn--flat"><a target="_self" href="ContactFrom_v4/index.html">Add</a></button>
+                        </nav>
+                    </div>
+                </section>
+
+            </div>
+
+        </section>
+        <script>
+            var grid = new dhx.Grid("grid", {
+                columns: [
+                    { width: 120, id: "Nom", header: [{ text: "Nom" }, { content: "comboFilter", filterConfig: { placeholder: "Filtre nom", virtual: true } } ] },
+                    { width: 120, id: "Prenom", header: [{ text: "Prenom" }, { content: "comboFilter", filterConfig: { placeholder: "Filtre prénom", virtual: true } }] },
+                    { width: 75, id: "Role", header: [{ text: "Rôle"}, { content: "selectFilter" }] },
+                    { width: 50, id: "Classe", header: [{ text: "Classe" },{content:"selectFilter"}] },
+                    { width: 100, id: "Nationality", header: [{ text: "Nationalité " },{ content: "selectFilter" }] },
+                    { width: 30, id: "age", header: [{ text: "Age" },{ content: "selectFilter" }] },
+                ],
+                headerRowHeight: 50,
+                fitToContainer : true,
+
+                selection : "row",
+
+
+
+
+                data: dataset
+            });
+
+            grid.data.load("../common/dataset.json");
+
+            document.querySelector("#remove").addEventListener("click", function() {
+                let cell = grid.selection.getCell();
+                if (cell.row) {
+                    grid.data.remove(cell.row.id);
+                    let state = grid.data.serialize("../common/dataset.json");
+
+
+
+                }
+
+
+            }); let grid2 = new dhx.Grid(document.body);
+
+            grid.data.parse(state);
+            document.querySelector("#AddObject").addEventListener("click", function() {
+
+            });
+
+        </script>
+
+
 </div>
+</div>
+
 
 
 
@@ -85,5 +182,6 @@
 </script>
 
 </body>
+
 
 </html>
