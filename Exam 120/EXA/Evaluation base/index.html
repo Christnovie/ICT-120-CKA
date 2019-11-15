@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
+    <link rel="stylesheet" type="text/css" href="Exa.CSS.css">
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.css">
 </head>
 <body>
     <h2>Inscription au tchoukball club Ste-Croix</h2>
-    <form action="motivation.html">
-        <label>Prénom</label><input type="text" name="txtFirstName"><div>Invalide: trop court</div>
-        <label>Nom</label><input type="text" name="txtLastName"><div>Invalide: trop court</div>
-        <label>Mot de passe</label><input type="password"><div>Invalide: minimum 6 caractères</div>
-        <label>Confirmation</label><input type="password"><div>Invalide: différent</div>
-        <input type="submit" value="Envoyer">
+    <form action="" id="frmForm" name="frmFormulaire" onsubmit="validate()" class="form-group ">
+        <div  class="container form-group">
+       <div > <label>Prénom</label><input type="text"class="form-control" name="txtFirstName" id="txtFirstName"></div><div id="verif1" class="Invalid">Invalide: trop court</div>
+        <div ><label>Nom</label><input type="text"class="form-control" name="txtLastName" id="txtLastName"></div><div  id="verif2" class="Invalid">Invalide: trop court</div>
+        <div><label>Mot de passe</label><input type="password"class="form-control" name="txtPwd" id="txtPwd"></div><div  id="verif3" class="Invalid">Invalide: minimum 6 caractères</div>
+        <div > <label>Confirmation</label><input type="password"class="form-control" name="txtConfirmPwd" id="txtConfirmPwd"></div><div  id="verif4" class="Invalid">Invalide: différent</div><br>
+        <input class="btn-block bg-info " type="submit" id="btnEnvoie" value="Envoyer">
+        </div>
     </form>
 </body>
 </html>
+<script src="Exa.Script.js">
+</script>

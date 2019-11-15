@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Motivation</title>
+    <link rel="stylesheet" type="text/css" href="Exa.CSS.css">
 </head>
 <body>
 <div class="container-fluid flex-column">
     <h2>Bonjour <span>(prénom)</span> <span>(nom)</span></h2>
     <form action="thankyou.html">
         <label>Veuillez décrire ci-dessous votre motivation à nous rejoindre, en au minimum 30 caractères et au maximum 144</label><br>
-        <textarea cols="60" rows="3"></textarea>
+        <textarea cols="60" rows="3" id="texteEcrit"></textarea>
         <div>Cette description est trop courte</div>
-        <div>Il vous reste 144 caractères</div>
+        <div>Il vous reste<span id="caracter"></span>  caractères</div>
         <input type="submit" value="Ok">
     </form>
 </div>
